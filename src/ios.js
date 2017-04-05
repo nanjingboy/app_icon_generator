@@ -4,7 +4,7 @@ const Base = require("./base")
 
 class IOS extends Base {
 
-  static sizes() {
+  static iconSizes() {
     return [
       { name: "icon-60@3x.png", width: 180, height: 180 },
       { name: "icon-60.png", width: 60, height: 60 },

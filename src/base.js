@@ -8,19 +8,19 @@ const mkdirp = require("mkdirp")
 class Base {
 
   static icon(input, output) {
-    this.sizes().forEach((size) => {
-      let target = this.targetPath(output, size)
-      this.mkdir(target, () => {
-        this.resize(input, target, size.width, size.height)
+    this.iconSizes().forEach((size) => {
+      let targetPath = this.iconTargetPath(output, size)
+      this.mkdir(targetPath, () => {
+        this.resize(input, targetPath, size.width, size.height)
       })
     })
   }
 
-  static sizes() {
+  static iconSizes() {
     return []
   }
 
-  static targetPath(output, size) {
+  static iconTargetPath(output, size) {
     return path.join(output, size.name)
   }
 

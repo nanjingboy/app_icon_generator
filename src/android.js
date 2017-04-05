@@ -5,7 +5,7 @@ const Base = require("./base")
 
 class Android extends Base {
 
-  static sizes() {
+  static iconSizes() {
     return [
       { name: "ldpi", width: 36, height: 36 },
       { name: "mdpi", width: 48, height: 48 },
@@ -16,7 +16,7 @@ class Android extends Base {
     ]
   }
 
-  static targetPath(output, size) {
+  static iconTargetPath(output, size) {
     return path.join(output, `drawable-${size.name}`, 'icon.png')
   }
 }
