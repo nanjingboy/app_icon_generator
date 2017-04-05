@@ -15,14 +15,23 @@ function platformProcessor(platform) {
   }
 }
 
+function run(command, platform, input, output) {
+  let processor = platformProcessor(platform)
+  if (processor) {
+    processor[command](path.resolve(input), path.resolve(output))
+  }
+}
+
 program.version("1.0.0")
 program.command("icon <platform> <input> <output>")
   .description("generate incos for given platform")
   .action((platform, input, output) => {
-    let processor = platformProcessor(platform)
-    if (processor) {
-      processor.icon(path.resolve(input), path.resolve(output))
-    }
+    run("icon", platform, input, output)
+  })
+program.command("splash <platform> <input> <output>")
+  .description("generate splash screen images for given platform")
+  .action((platform, input, output) => {
+    run("splash", platform, input, output)
   })
 
 program.parse(process.argv)

@@ -24,6 +24,23 @@ class Base {
     return path.join(output, size.name)
   }
 
+  static splash(input, output) {
+    this.splashSizes().forEach((size) => {
+      let targetPath = this.splashTargetPath(output, size)
+      this.mkdir(targetPath, () => {
+        this.resize(input, targetPath, size.width, size.height)
+      })
+    })
+  }
+
+  static splashSizes() {
+    return []
+  }
+
+  static splashTargetPath(output, size) {
+    return path.join(output, size.name)
+  }
+
   static mkdir(targetPath, callback) {
     mkdirp(path.dirname(targetPath), (error, info) => {
       if (error) {

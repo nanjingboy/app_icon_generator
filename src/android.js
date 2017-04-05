@@ -19,6 +19,21 @@ class Android extends Base {
   static iconTargetPath(output, size) {
     return path.join(output, `drawable-${size.name}`, 'icon.png')
   }
+
+  static splashSizes() {
+    return [
+      { name: "ldpi", width: 200, height: 320 },
+      { name: "mdpi", width: 320, height: 480 },
+      { name: "hdpi", width: 480, height: 800 },
+      { name: "xhdpi", width: 720, height: 1280 },
+      { name: "xxhdpi", width: 960, height: 1600 },
+      { name: "xxxhdpi", width: 1280, height: 1920 }
+    ]
+  }
+
+  static splashTargetPath(output, size) {
+    return path.join(output, `drawable-${size.name}`, 'screen.png')
+  }
 }
 
 module.exports = Android
