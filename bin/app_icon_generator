@@ -7,9 +7,9 @@ const program = require("commander")
 function platformProcessor(platform) {
   switch(platform.toLocaleLowerCase()) {
     case "ios":
-      return require("./ios")
+      return require("../src/ios")
     case "android":
-      return require("./android")
+      return require("../src/android")
     default:
       return null
   }
