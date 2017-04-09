@@ -1,5 +1,5 @@
 # app_icon_generator
-A simple tool to generate icons & splash screen images for iOS & Android
+A simple tool to generate icons, splash screen images for iOS, OXS and Android
 
 ## Installing
 
@@ -33,6 +33,7 @@ A simple tool to generate icons & splash screen images for iOS & Android
 ```shell
   $ app_icon_generator icon android ~/demo/icon.png ~/res
   $ app_icon_generator icon ios ~/demo/icon.png ~/res
+  $ app_icon_generator icon osx ~/demo/icon.png ~/res
 ```
 
 #### Generate splash screen images:
@@ -43,4 +44,4 @@ A simple tool to generate icons & splash screen images for iOS & Android
 ```
 
 ## License
->- [MIT](http://www.opensource.org/licenses/MIT)
+* [MIT](http://www.opensource.org/licenses/MIT)

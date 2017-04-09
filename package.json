@@ -1,13 +1,14 @@
 {
   "name": "app_icon_generator",
-  "version": "1.0.0",
-  "description": "A simple tool to generate icons & splash screen images for iOS & Android",
+  "version": "1.1.0",
+  "description": "A simple tool to generate icons, splash screen images for iOS, OXS and Android",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nanjingboy/app_icon_generator.git"
   },
   "keywords": [
     "iOS",
+    "OSX",
     "Android",
     "Icon",
     "Splash Screen",
