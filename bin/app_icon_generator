@@ -10,6 +10,8 @@ function platformProcessor(platform) {
       return require("../src/ios")
     case "android":
       return require("../src/android")
+    case "osx":
+      return require("../src/osx")
     default:
       return null
   }
